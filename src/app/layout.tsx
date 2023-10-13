@@ -7,9 +7,9 @@ import "./globals.css";
 const sora = Sora({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "M Fahlevi - Landing Page",
+  title: "M Fahlevi - Linktree",
   description: "My Personal Landing Page",
-  icons: "/images/aulianza.webp",
+  icons: "/next.svg",
   // openGraph: {
   //   images: "/images/aulianza.webp",
   //   url: "https://aulianza.com",
