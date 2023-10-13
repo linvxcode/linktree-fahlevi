@@ -9,14 +9,12 @@ import {
   BsLinkedin as LinkedinIcon,
 } from "react-icons/bs";
 
-import BottomSheet from "@/common/components/BottomSheet";
 import { LinkProps } from "@/common/types/link";
 
-import BuyACoffee from "./BuyACoffee";
 
 const LINKS: LinkProps[] = [
   {
-    label: "Website & Portfolio",
+    label: "Portfolio",
     icon: <RocketIcon size={20} />,
     href: "https://personal-website-linvxcode.vercel.app/",
     className: "bg-white",
@@ -25,21 +23,21 @@ const LINKS: LinkProps[] = [
   {
     label: "Github",
     icon: <GithubIcon size={20} />,
-    href: "https://personal-website-linvxcode.vercel.app/",
+    href: "https://github.com/linvxcode",
     className: "bg-white",
     target: "_blank",
   },
   {
     label: "Instagram",
     icon: <InstagramIcon size={20} />,
-    href: "https://personal-website-linvxcode.vercel.app/",
+    href: "https://www.instagram.com/viii_999_/?igshid=MzMyNGUyNmU2YQ%3D%3D",
     className: "bg-white",
     target: "_blank",
   },
   {
     label: "Linkedin",
     icon: <LinkedinIcon size={20} />,
-    href: "https://personal-website-linvxcode.vercel.app/",
+    href: "https://www.linkedin.com/in/m-fahlevi-921a1b26a/",
     className: "bg-white",
     target: "_blank",
   },
@@ -63,25 +61,26 @@ const ButtonLink = () => {
           <button
             key={index}
             className={clsx(
-              "flex items-center justify-center gap-x-2 py-3 px-5 rounded-xl hover:gap-x-3 transition-all duration-300 w-60  shadow-sm",
-              item.className,
+              "flex items-center overflow-hidden justify-center gap-x-2 py-3 px-5 rounded-xl hover:gap-x-3 w-60 transition-all duration-300   shadow-sm",
+              item.className
             )}
             onClick={() => handleClick(item.href, item.target)}
           >
-            {item.icon}
-            <span >{item.label}</span>
+            <span className="flex justify-center items-center">
+              {item.icon}
+            </span>
+            <span
+              data-aos="zoom-in-right"
+              data-aos-delay="300"
+              data-aos-duration="1000"
+            >
+              {item.label}
+            </span>
           </button>
         ))}
       </div>
 
-      {/* <BottomSheet
-        key={isBottomSheetOpen ? "bottom-sheet-open" : "bottom-sheet-closed"}
-        title="Buy me a Coffee"
-        isOpen={isBottomSheetOpen}
-        onClose={() => setBottomSheetOpen(false)}
-      >
-        <BuyACoffee />
-      </BottomSheet> */}
+
     </>
   );
 };
